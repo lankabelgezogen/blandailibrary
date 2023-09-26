@@ -12,5 +12,5 @@ setup(
     description='A Python wrapper for the Bland.ai API',
     license='MIT', 
     keywords='blandai API wrapper',
-    url='https://github.com/yourusername/blandai'
+    url='https://github.com/lankabelgezogen/blandailibrary'
 )

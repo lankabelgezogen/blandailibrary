@@ -5,7 +5,7 @@ class BlandAI:
         self.api_key = api_key
         self.headers = {'authorization': self.api_key}
         
-    def call(self, phone_number, task, voice_id, request_data, reduce_latency, amd):
+    def call(self, phone_number, task, voice_id=0, request_data=None, reduce_latency=False, amd=True, webhook=None):
         # API endpoint
         url = 'https://api.bland.ai/call'
         
@@ -17,7 +17,7 @@ class BlandAI:
             'request_data': request_data,
             'reduce_latency': reduce_latency,
             'amd': amd,
-            #'webhook': webhook
+            'webhook': webhook
         }
         
         # Make the API call
@@ -39,7 +39,7 @@ class BlandAI:
         # Return the response
         return response.json()
 
-    def hold(self, phone_number, hold_connect, task):
+    def hold(self, phone_number, hold_connect, task=None):
         # API endpoint
         url = 'https://api.bland.ai/hold'
         
